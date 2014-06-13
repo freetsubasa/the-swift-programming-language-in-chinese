@@ -1,118 +1,113 @@
-> 翻译：numbbbbb, lyuka, JaySurplus
-
-> 校对：lslxdx
-
-# 基础部分
+# 基礎部分
 -----------------
 
-本页包含内容：
+本頁包含内容：
 
-- [常量和变量](#constants_and_variables)
-- [注释](#comments)
-- [分号](#semicolons)
-- [整数](#integers)
-- [浮点数](#floating-point_numbers)
-- [类型安全和类型推测](#type_safety_and_type_inference)
-- [数值型字面量](#numeric_literals)
-- [数值型类型转换](#numeric_type_conversion)
-- [类型别名](#type_aliases)
-- [布尔值](#booleans)
-- [元组](#tuples)
-- [可选](#optionals)
-- [断言](#assertions)
+- [常數和變數](#constants_and_variables)
+- [註解](#comments)
+- [分號](#semicolons)
+- [整數](#integers)
+- [浮點數](#floating-point_numbers)
+- [型別安全和型態推論](#type_safety_and_type_inference)
+- [數字字面常數](#numeric_literals)
+- [數字類型轉換](#numeric_type_conversion)
+- [類型别名](#type_aliases)
+- [布林值](#booleans)
+- [元祖](#tuples)
+- [選擇性](#optionals)
+- [斷言](#assertions)
 
-Swift 是 iOS 和 OS X 应用开发的一门新语言。然而，如果你有 C 或者 Objective-C 开发经验的话，你会发现 Swift 的很多内容都是你熟悉的。
+Swift 是 iOS 和 OS X 應用開發的一門新語言。然而，如果你有 C 或是 Objective-C 開發經驗的話，你會發現 Swift 的很多內容都是你熟悉的。
 
-Swift 的类型是在 C 和 Objective-C 的基础上提出的，`Int`是整型；`Double`和`Float`是浮点型；`Bool`是布尔型；`String`是字符串。Swift 还有两个有用的集合类型，`Array`和`Dictionary`，请参考[集合类型](04_Collection_Types.html)。
+Swift 的類型是在 C 和 Objective-C 的基礎上提出的，`Int`是整數型；`Double`和`Float`是浮點型；`Bool`是布林型；`String`是字串。Swift 還有兩個有用的聚集型態，`Array`和`Dictionary`，请参考[聚集型態](04_Collection_Types.html)。
 
-就像 C 语言一样，Swift 使用变量来进行存储并通过变量名来关联值。在 Swift 中，值不可变的变量有着广泛的应用，它们就是常量，而且比 C 语言的常量更强大。在 Swift 中，如果你要处理的值不需要改变，那使用常量可以让你的代码更加安全并且更好地表达你的意图。
+就像 C 語言一樣，Swift 使用變數來進行儲存並通過變數名來關聯值(命名參數)。在 Swift 中，值不可變得變數有著廣泛的應用，它們就是常數，而且比 C 語言的常數更強大。在 Swift 中，如果你要處理的值不需要改變，那使用常數的可以讓你的程式碼更加安全並且更好的表達你的意圖。
 
-除了我们熟悉的类型，Swift 还增加了 Objective-C 中没有的类型比如元组（Tuple）。元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。
+除了我們熟悉的類型，Swift 還增加了 Objective-C 中沒有的類型，比如元祖（Tuple）。元祖可以讓你創建或者傳遞一組數據，比如作為函數的回傳值時，你可以用一個元祖可以返回多個值。  
 
-Swift 还增加了可选（Optional）类型，用于处理值缺失的情况。可选表示“那儿有一个值，并且它等于 x ”或者“那儿没有值”。可选有点像在 Objective-C 中使用`nil`，但是它可以用在任何类型上，不仅仅是类。可选类型比 Objective-C 中的`nil`指针更加安全也更具表现力，它是 Swift 许多强大特性的重要组成部分。
+Swift 還增加了選擇性（Optional）類型，用於處理值缺失的實況。可選表示「那邊有一個值，並且它等於 x」或者「那邊沒有值」。可選有點像在 Objective-C 中使用`nil`，但是它可以用在任何類型上，不僅僅是 class。選擇性類型比 Objective-C 中的`nil`指標更加安全也更具表現力，它是 Swift 許多強大特性的重要組成部分。 
 
-Swift 是一个类型安全的语言，可选就是一个很好的例子。Swift 可以让你清楚地知道值的类型。如果你的代码期望得到一个`String`，类型安全会阻止你不小心传入一个`Int`。你可以在开发阶段尽早发现并修正错误。
+Swift 是一個型別安全的語言，可選就是一個很好的例子。Swift 可以上你清楚的知道值的類型。如果你的程式碼期望得上一個`String`，型別安全會阻止你不小心傳入一個`Int`。你可以在開發階段盡早發現並修正錯誤。
+
 
 <a name="constants_and_variables"></a>
-## 常量和变量
+## 常數和變數
 
-常量和变量把一个名字（比如`maximumNumberOfLoginAttempts`或者`welcomeMessage`）和一个指定类型的值（比如数字`10`或者字符串`"Hello"`）关联起来。常量的值一旦设定就不能改变，而变量的值可以随意更改。
+常數和變數把一個名字（比如`maximumNumberOfLoginAttempts`或者`welcomeMessage`）和一個指定類型的值（比如數字`10`或者字串`"Hello"`）關聯起來。常數的值一旦設定就不能改變，而變數的值可以隨意更改。
 
-### 声明常量和变量
+### 宣告常數和變數
 
-常量和变量必须在使用前声明，用`let`来声明常量，用`var`来声明变量。下面的例子展示了如何用常量和变量来记录用户尝试登录的次数：
+常數和變數必續在使用前聲明，用`let`來宣告常數，用`var`來宣告變數。下面的例子展示了如何使用常數和變數來紀錄使用者嘗試登入的次數：
 
 	let maximumNumberOfLoginAttempts = 10
 	var currentLoginAttempt = 0
 
+這兩行程式碼可以被理解為：
 
-这两行代码可以被理解为：
+「宣告一個名字是`maximumNumberOfLoginAttempts`的新常數，並給它一個為`10`的值。然後，宣告一個名字是`currentLoginAttempt`的變數並將它的值初始化為`0`。」
 
-“声明一个名字是`maximumNumberOfLoginAttempts`的新常量，并给它一个值`10`。然后，声明一个名字是`currentLoginAttempt`的变量并将它的值初始化为`0`.”
+在這個例子中，允許的最大嘗試登入次數被宣告為一個常數，因為這個值不會改變。當前嘗試登入次數被宣告為一個變數，因為每次嘗試登入失敗的時候都需要增加這個值。
 
-在这个例子中，允许的最大尝试登录次数被声明为一个常量，因为这个值不会改变。当前尝试登录次数被声明为一个变量，因为每次尝试登录失败的时候都需要增加这个值。
-
-你可以在一行中声明多个常量或者多个变量，用逗号隔开：
+你可以在一行中宣告多個常數或者多個變數，用逗號隔開：
 
     var x = 0.0, y = 0.0, z = 0.0
 
->注意：
->
-如果你的代码中有不需要改变的值，请使用`let`关键字将它声明为常量。只将需要改变的值声明为变量。
+>Note：
+>如果你的程式碼中有不需要改變的值，請使用`let`關鍵字將它宣告為常數。只將需要改變的值宣告為變數。
 
-### 类型标注
+### 標註型態
 
-当你声明常量或者变量的时候可以加上_类型标注（type annotation）_，说明常量或者变量中要存储的值的类型。如果要添加类型标注，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+當你宣告常數或者變數的时候可以加上_標註型態（type annotation）_，說明常數或者變數中要儲存的值的類型。如果要添加標注型態，需要在常數或者變數名稱後面加上一個冒號和空格，然后加上標注型態。
 
-这个例子给`welcomeMessage`变量添加了类型标注，表示这个变量可以存储`String`类型的值：
+這個例子给`welcomeMessage`變數添加了標注型態，表示這個變數可以儲存`String`類型的值：
 
     var welcomeMessage: String
 
-声明中的冒号代表着“是...类型”，所以这行代码可以被理解为：
+宣告中的冒號代表著“是...類型”，所以這行程式碼可以被理解為：
 
-“声明一个类型为`String`，名字为`welcomeMessage`的变量。”
+「宣告一個類型為`String`，名字為`welcomeMessage`的變數。」
 
-“类型为`String`”的意思是“可以存储任意`String`类型的值。”
+「類型為`String`」的意思是「可以儲存任意`String`類型的值。」
 
-`welcomeMessage`变量现在可以被设置成任意字符串：
+`welcomeMessage`變數現在可以被設置成任意字串：
 
     welcomeMessage = "Hello"
 
-> 注意：
+> Note：
 >
-一般来说你很少需要写类型标注。如果你在声明常量或者变量的时候赋了一个初始值，Swift可以推断出这个常量或者变量的类型，请参考[类型安全和类型推断](#type_safety_and_type_inference)。在上面的例子中，没有给`welcomeMessage`赋初始值，所以变量`welcomeMessage`的类型是通过一个类型标注指定的，而不是通过初始值推断的。
+一般來说你很少需要寫標注型態。如果你在宣告常數或者變數的时候賦予了一個初始值，Swift可以推斷出這個常數或者變數的類型，請参考[型別安全和型態推論](#type_safety_and_type_inference)。在上面的例子中，没有給`welcomeMessage`賦予初始值，所以變數`welcomeMessage`的類型是通過一個標注型態指定的，而不是通過初始值推斷的。
 
-### 常量和变量的命名
+### 常數和變數的命名
 
-你可以用任何你喜欢的字符作为常量和变量名，包括 Unicode 字符：
+你可以用任何你喜欢的字符作為常數和變數名稱，包括 Unicode：
 
     let π = 3.14159
     let 你好 = "你好世界"
     let 🐶🐮 = "dogcow"
 
-常量与变量名不能包含数学符号，箭头，保留的（或者非法的）Unicode 码位，连线与制表符。也不能以数字开头，但是可以在常量与变量名的其他地方包含数字。
+常數與變數名不能包含數學符號，箭頭，保留的（或者非法的）Unicode 編碼，方框繪製字元。也不能以數字開頭，但是可以在常數與變數名的其他地方包含數字。
 
-一旦你将常量或者变量声明为确定的类型，你就不能使用相同的名字再次进行声明，或者改变其存储的值的类型。同时，你也不能将常量与变量进行互转。
+一旦你將常數或者變數宣告為確定的類型，你就不能使用相同的名字再次進行宣告，或者改變其儲存的值的類型。同時，你也不能將常數與變數進行互轉。
 
-> 注意：
+> Note：
 >
-如果你需要使用与Swift保留关键字相同的名称作为常量或者变量名，你可以使用反引号（`）将关键字包围的方式将其作为名字使用。无论如何，你应当避免使用关键字作为常量或变量名，除非你别无选择。
+如果你需要使用與 Swift 保留關鍵字相同的名稱作為常數或者變數名，你可以使用反引號（`）將關鍵字包圍的方式將其作為名稱使用。無論如何，你應當避免使用關鍵字作為常數或變數名，除非你別無選擇。
 
-你可以更改现有的变量值为其他同类型的值，在下面的例子中，`friendlyWelcome`的值从`"Hello!"`改为了`"Bonjour!"`:
+你可以更改現有的變數值為其他同類型的值，在下面的例子中，`friendlyWelcome`的值從`"Hello!"`改為了`"Bonjour!"`：
 
-    var friendlyWelcome = "Hello!"
-    friendlyWelcome = "Bonjour!"
-    // friendlyWelcome 现在是 "Bonjour!"
+	var friendlyWelcome = "Hello!"
+	friendlyWelcome = "Bonjour!"
+	// friendlyWelcome 現在是 "Bonjour!"
 
-与变量不同，常量的值一旦被确定就不能更改了。尝试这样做会导致编译时报错：
+與變數不同，常數的值一旦被確定就不能更改。嘗試這樣作會導致編譯時出現錯誤：
 
-    let languageName = "Swift"
-    languageName = "Swift++"
-    // 这会报编译时错误 - languageName 不可改变
+	let languageName = "Swift"
+	languageName = "Swift++"
+	// 這會出現編譯錯誤 - languageName 不可改變
 
-### 输出常量和变量
+### 輸出常數和變數
 
-你可以用`println`函数来输出当前常量或变量的值:
+你可以用`println`函數來輸出當前常數或變數的值:
 
     println(friendlyWelcome)
     // 输出 "Bonjour!"
@@ -612,3 +607,10 @@ Swift 的`nil`和 Objective-C 中的`nil`并不一样。在 Objective-C 中，`n
 > 注意：
 >
 断言可能导致你的应用终止运行，所以你应当仔细设计你的代码来让非法条件不会出现。然而，在你的应用发布之前，有时候非法条件可能出现，这时使用断言可以快速发现问题。
+
+- - -
+> 翻譯：freetsubasa
+
+> 簡中翻譯：numbbbbb, lyuka, JaySurplus
+
+> 簡中校對：lslxdx
