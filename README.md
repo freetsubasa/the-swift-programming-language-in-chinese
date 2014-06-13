@@ -1,33 +1,20 @@
-> Swift 中文翻译组：364279588（要求对翻译感兴趣）
+> 如果你覺得這個計劃不錯，請[Star一下](https://github.com/ncunos/the-swift-programming-language-in-chinese)，您的支持是我們進步最大的動力！
 
-> Swift 兴趣交流群：307017261
+## The Swift Programming Language 臺灣繁體中文版
 
-> [Swift 开发者社区](http://swiftist.org)
+### 自己的中文版自己出
 
-<!-- -->
-> 如果你觉得这个项目不错，请[点击Star一下](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)，您的支持我们最大的动力。
+你好，我們是中央大學[網路開源社](http://nos.ncu.cc)，
 
-# The Swift Programming Language 中文版
+中國網友在 2014/6/12 正式推出 [The Swift Programming Language](https://developer.apple.com/swift/) 的[簡體中文翻譯本](http://www.swiftguide.cn/)，自 WWDC 公佈之後僅僅歷經 9 日便釋出，實在佩服。
 
-###这一次，让中国和世界同步
+不過臺灣與大陸的用語有些不同，為了方便，我們針對臺灣用語進行改寫，並以繁體中文發行，翻譯過程儘量貼近原文，若有問題歡迎至 [GitHub](https://github.com/ncunos/the-swift-programming-language-in-chinese) 上送交 Issue。
 
-现在是6月12日凌晨4:38，我用了整整一晚上的时间来进行最后的校对，终于可以在12日拿出一个可以发布的版本。
+希望大家在閱讀此書的時候也別忘記開源的精神，如果有任何想法或是建議歡迎提出，網路開源社謝謝您的支持。
 
-9天时间，1317个 Star，310个 Fork，超过30人参与翻译和校对工作，项目最高排名GitHub总榜第4。
+_PS：翻譯進行中，如有簡體頁面，純屬正常，我們仍在翻譯中……_
 
-设想过很多遍校对完成时的场景，仰天大笑还是泪流满面？真正到了这一刻才发现，疲倦已经不允许我有任何情绪。
-
-说实话，刚开始发起项目的时候完全没想到会发展成今天这样，我一度计划自己一个人翻译完整本书。万万没想到，会有这么多的人愿意加入并贡献出自己的力量。
-
-coverxit发给我最后一份文档的时候说，我要去背单词了，我问他，周末要考六级？他说是的。
-
-pp-prog告诉我，这几天太累了，校对到一半睡着了，醒来又继续做。2点17分，发给我校对完成的文档。
-
-lifedim说他平时12点就会睡，1点47分，发给我校对后的文档。
-
-团队里每个人都有自己的事情，上班、上学、创业，但是我们只用了9天就完成整本书的翻译。我不知道大家付出了多少，牺牲了多少，但是我知道，他们的付出必将被这些文字记录下来，即使再过10年，20年，依然熠熠生辉，永不被人遗忘。
-
-全体人员名单（排名不分先后）：
+簡體翻譯版感謝名單（不排序）：
 
 - numbbbbb
 - coverxit
