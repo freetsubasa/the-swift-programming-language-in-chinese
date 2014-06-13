@@ -1,117 +1,68 @@
-《The Swift Programming Language》in Chinese
-=============================================
+> Swift 中文翻译组：364279588（要求对翻译感兴趣）
 
-中文版Apple官方Swift教程《The Swift Programming Language》
+> Swift 兴趣交流群：307017261
 
-中文Swift社区[Swiftist](http://swiftist.org/)，新社区，正在建设中，感兴趣的朋友可以一起参与进来。
+> [Swift 开发者社区](http://swiftist.org)
 
-**如果想帮忙翻译或者校对，请加QQ群：364279588，谢谢！**
+<!-- -->
+> 如果你觉得这个项目不错，请[点击Star一下](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)，您的支持我们最大的动力。
 
-# 在线阅读
+# The Swift Programming Language 中文版
 
-使用Gitbook制作，可以直接[在线阅读](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)。
+###这一次，让中国和世界同步
 
-# 电子书下载
+现在是6月12日凌晨4:38，我用了整整一晚上的时间来进行最后的校对，终于可以在12日拿出一个可以发布的版本。
 
-CocoaChina精校PDF→[点我下载](http://vdisk.weibo.com/s/EhsPPzRRQ5CZ/1402621206)
+9天时间，1317个 Star，310个 Fork，超过30人参与翻译和校对工作，项目最高排名GitHub总榜第4。
 
-其他格式可以通过PDF转换
+设想过很多遍校对完成时的场景，仰天大笑还是泪流满面？真正到了这一刻才发现，疲倦已经不允许我有任何情绪。
 
-# 当前阶段
+说实话，刚开始发起项目的时候完全没想到会发展成今天这样，我一度计划自己一个人翻译完整本书。万万没想到，会有这么多的人愿意加入并贡献出自己的力量。
 
-文章已经全部翻译完成，当前阶段为自由校对阶段，可以随意提issue和pr。
+coverxit发给我最后一份文档的时候说，我要去背单词了，我问他，周末要考六级？他说是的。
 
+pp-prog告诉我，这几天太累了，校对到一半睡着了，醒来又继续做。2点17分，发给我校对完成的文档。
 
-# 译者记录
+lifedim说他平时12点就会睡，1点47分，发给我校对后的文档。
 
-> 说明：翻译之前请先到PR列表中查看别人认领的内容，尽量不要重复，谢谢！
+团队里每个人都有自己的事情，上班、上学、创业，但是我们只用了9天就完成整本书的翻译。我不知道大家付出了多少，牺牲了多少，但是我知道，他们的付出必将被这些文字记录下来，即使再过10年，20年，依然熠熠生辉，永不被人遗忘。
 
-* 欢迎使用 Swift
-   * 关于 Swift(完成 By numbbbbb)
-   * Swift 初见(完成 By numbbbbb)
-* Swift 教程
-   * 基础部分(完成 By numbbbbb, lyuka, JaySurplus)
-   * 基本操作符(完成 By @xielingwang)
-   * 字符串和字符(完成 By @wh1100717)
-   * 集合类型(完成)
-   * 控制流(完成 By @vclwei, @coverxit, @NicePiao)
-   * 函数(完成 By @honghaoz)
-   * 闭包(完成 By @wh1100717)
-   * 枚举(完成 By @yankuangshi)
-   * 类和结构体(完成 By @JaySurplus)
-   * 属性(完成 By @shinyzhu)
-   * 方法(完成 By @pp-prog)
-   * 下标(完成 By @siemenliu)
-   * 继承(完成 By @Hawstein)
-   * 构造过程(完成 By @lifedim)
-   * 析构过程(完成)
-   * 自动引用计数(完成 By @TimothyYe)
-   * 可选链(完成)
-   * 类型检查(完成 By @xiehurricane)
-   * 嵌套类型(完成 By @Lin-H)
-   * 扩展(完成 By @lyuka)
-   * 协议(完成 By @geek5nan)
-   * 泛型(完成 By @takalard)
-   * 高级操作符(完成 By @xielingwang)
-* 语言参考
-   * 关于语言参考(完成 By @ChildhoodAndy)
-   * 词法结构(完成 By @superkam)
-   * 类型(完成 By @lyuka)
-   * 表达式(完成 By @sg552 )
-   * 语句(完成 By @coverxit)
-   * 声明(完成 By @marsprince)
-   * 特性(完成 By @Hawstein)
-   * 模式(完成 By @honghaoz)
-   * 泛型参数(完成 By @fd5788)
-   * 语法总结(完成 By @StanZhai)
+全体人员名单（排名不分先后）：
 
-# 贡献力量
-
-如果想做出贡献的话，你可以：
-
-- 帮忙校对，挑错别字、病句等等
-- 提出修改建议
-- 提出术语翻译建议
-
-# 翻译建议
-
-如果你愿意一起校对的话，请仔细阅读：
-
-- 使用markdown进行翻译，文件名必须使用英文，因为中文的话gitbook编译的时候会出问题
-- 翻译后的文档请放到source文件夹下的对应章节中，然后pull request即可，我会用gitbook编译成网页
-- 工作分支为gh-pages，用于GitHub的pages服务
-- fork过去之后新建一个分支进行翻译，完成后pull request这个分支，没问题的话我会合并到gh-pages分支中
-- 有其他任何问题都欢迎发issue，我看到了会尽快回复
-
-谢谢！
-
-# 关于术语
-
-翻译术语的时候请参考这个流程：
-
-- 尽量保证和已翻译的内容一致
-- 尽量先搜索，一般来说编程语言的大部分术语是一样的，可以参考[微软官方术语搜索](http://www.microsoft.com/Language/zh-cn/Search.aspx)
-- 如果以上两条都没有找到合适的结果，请自己决定一个合适的翻译或者直接使用英文原文，后期校对的时候会进行统一
-
-# 参考流程
-
-有些朋友可能不太清楚如何帮忙翻译，我这里写一个简单的流程，大家可以参考一下：
-
-1. 首先fork我的项目
-2. 把fork过去的项目也就是你的项目clone到你的本地
-3. 在命令行运行 `git branch develop` 来创建一个新分支
-4. 运行 `git checkout develop` 来切换到新分支
-5. 运行 `git remote add upstream https://github.com/numbbbbb/the-swift-programming-language-in-chinese.git` 把我的库添加为远端库
-6. 运行 `git remote update`更新
-7. 运行 `git fetch upstream gh-pages` 拉取我的库的更新到本地
-8. 运行 `git rebase upstream/gh-pages` 将我的更新合并到你的分支
-
-这是一个初始化流程，只需要做一遍就行，之后请一直在develop分支进行修改。
-
-如果修改过程中我的库有了更新，请重复6、7、8步。
-
-修改之后，首先push到你的库，然后登录GitHub，在你的库的首页可以看到一个 `pull request` 按钮，点击它，填写一些说明信息，然后提交即可。
-
-
-# 开源协议
-基于[WTFPL](http://en.wikipedia.org/wiki/WTFPL)协议开源。
+- numbbbbb
+- coverxit
+- wh1100717
+- TimothyYe
+- honghaoz
+- Hawstein
+- JaySurplus
+- stanzhai
+- lyuka
+- geek5nan
+- xielingwang
+- yankuangshi
+- dabing1022
+- siemenliu
+- fd5788
+- youkugems
+- haolloyin
+- superkam
+- vclwei
+- sg552
+- bzsy
+- pyanfield
+- ericzyh
+- 088haizi
+- viztor
+- pp-prog
+- baocaixiong
+- marsprince
+- shinyzhu
+- happyming
+- menlongsheng
+- zq54zquan
+- Evilcome
+- lslxdx
+- yeahdongcn
+- zqp
+- xiehurricane
